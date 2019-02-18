@@ -160,13 +160,9 @@ local function IgnorePlayers(target)
 		end
 		if not isBot then
 			target:SetProp("m_bGunGameImmunity", 1)
-			print(playername)
+			--print(playername)
 		end
 	end
-	--]]
-	--[[
-	local bot = target:GetProp("m_iBotDifficulty")
-	print(tostring(bot))
 	--]]
 end
 
@@ -196,6 +192,7 @@ function CHAT_KillSay( Event ) -- lol paste
 		if not isBot then
 			if ( INDEX_Attacker == ME and INDEX_Victim ~= ME ) then
 				client.ChatSay( "Sorry for killing " .. NAME_Victim .. ", I try to only kill bots." );
+				print("Accidentally killed " .. NAME_Victim)
 			end
 		end
 
